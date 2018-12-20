@@ -1,0 +1,52 @@
+ /*
+ -------------------------------------------------------------------
+            CSS for Header Container
+  -------------------------------------------------------------------
+ */
+.HeaderWrapper{
+   min-height: 50px;
+   background-color: $header-bg-clr;
+   width:100%;
+   /* css for  Top Header */
+    .HeaderContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .leftItem {
+            padding-left:20px;
+            flex: 1 0 0;
+            h1{
+                margin: 0px;
+                line-height: 50px;
+                font-size: 24px;
+            }
+         }
+         .rightItem {
+            padding-right: 20px;
+            flex: 1 0 0;
+            text-align: right;
+            margin: auto 0;
+         }
+            
+    
+    }
+}
+
+
+
+/* On screens that are 768px less for Mobile and Tablet portrait */
+@media screen and (max-width: 768px) {
+    .HeaderWrapper{
+        .HeaderContainer{
+            .leftItem {
+                flex: 2 0 0;
+                h1{
+                    font-size: 18px;
+                }
+            }
+            
+                
+        
+        }
+    }
+}

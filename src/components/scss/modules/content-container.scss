@@ -1,0 +1,77 @@
+ /*
+ -------------------------------------------------------------------
+            CSS for Content Container
+  -------------------------------------------------------------------
+ */
+.contentWrapper{
+    margin-top:10px;
+    .contentContainer{
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+        /* css for shirt Tiles*/
+        .shirtTiles{
+            display: block;
+            flex: 1 0 auto;
+            max-width: 25%;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 1px solid $tile-border-clr;
+            /* css for Tile Image*/
+            .imageContainer{
+                padding: 20px;
+                
+            }
+            /* css for Sale and Exclusive items*/
+            .sale_Info_holder{
+                min-height: 50px;
+                .saleItem{
+                    display: inline;
+                    padding: 10px 20px;
+                    background-color: $sale-bg-clr;
+                    color:$sale-txt-clr;
+                }
+                .exclusiveItem{
+                    display: inline;
+                    padding: 10px 20px;
+                    background-color: $exclu-bg-clr;
+                    color:$sale-txt-clr;
+                }
+
+            }
+            /* css for Product name and price items*/
+            .tile_txt_holder{
+                display: flex;
+                flex-direction: row;
+                .leftItem {
+                    margin-top: auto;
+                    flex: 2 0 0;
+                 }
+                 .rightItem {
+                    flex: 1 0 0;
+                    text-align: right;
+                    font-size: 24px;
+                    font-weight: bold;
+                 }
+            }
+            
+        }
+   
+   }
+}
+
+
+
+/* On screens that are 768px less for Mobile and Tablet portrait */
+@media screen and (max-width: 768px) {
+    .contentWrapper{
+        margin-top:0px;
+        padding:20px;
+        .contentContainer{
+            display: block;
+            .shirtTiles{
+                max-width: 100%;
+            }
+        }
+   }
+}
